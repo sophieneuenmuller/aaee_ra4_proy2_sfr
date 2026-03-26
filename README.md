@@ -38,7 +38,6 @@ export DB_PORT=3306
 export DB_NAME=mapa_mundi
 export DB_USER=mi_usuario
 export DB_PASSWORD=mi_password
-export DB_URL=jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
 ```
 
 > Las variables solo existen en la sesión activa. Para persistirlas, se pueden añadir a `.bashrc`, `.zshrc` o a las variables de entorno del sistema.
