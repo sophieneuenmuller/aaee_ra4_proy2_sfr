@@ -6,7 +6,8 @@ on:
     branches:
       - '**' # Cualquier rama 
 
-# ===== Permisos del token automático de GitHub para que pueda "subir"(push del paso 4.) la imagen docker generada en el paso 3 al área de registro de GitHub ghcr.io/profies/aaee_mapamundi_sb =====
+# ===== Permisos del token automático de GitHub para que pueda "subir"(push del paso 4.) la imagen docker generada en el paso 3.
+# ===== La imagen se subirá al área de registro de GitHub ghcr.io/profies/aaee_mapamundi_sb =====
 permissions:
   contents: read
   packages: write
