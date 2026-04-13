@@ -19,24 +19,20 @@ public class ContinenteService {
     public ContinenteService(IContinenteDAO continenteDAO) {
         this.continenteDAO = continenteDAO;
     }
-    
-    
+
     public Continente obtenerContinentePorClave(String codigo) {
-    	
-    	
+
         if (codigo == null || codigo.isBlank()) {
             throw new IllegalArgumentException("Código inválido");
         }
 
         Continente continente = continenteDAO.obtenerContinentePorClave(codigo);
 
-        
         if (continente == null) {
             throw new ContinenteNoEncontradoException(
-                    "No existe el continente con código: " + codigo
-            );
+                    "No existe el continente con código: " + codigo);
         }
-    	
+
         return continente;
     }
 
@@ -45,8 +41,8 @@ public class ContinenteService {
         List<Continente> lista = continenteDAO.obtenerListaContinentes();
 
         // Esto provoca error
-        //lista = null;
-        
+        // lista = null;
+
         if (lista == null || lista.isEmpty()) {
             throw new RuntimeException("No hay continentes disponibles");
         }
@@ -62,13 +58,12 @@ public class ContinenteService {
 
         List<Continente> lista = continenteDAO.obtenerContinentePorNombre(nombre);
 
-    	// Al comentar este código desaparece el error
-        lista =null;
-        
+        // Al comentar este código desaparece el error
+        // lista =null;
+
         if (lista == null || lista.isEmpty()) {
             throw new ContinenteNoEncontradoException(
-                    "No existen continentes con nombre: " + nombre
-            );
+                    "No existen continentes con nombre: " + nombre);
         }
 
         return lista;
