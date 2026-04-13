@@ -1,7 +1,7 @@
 services:
   app:
-    image: ghcr.io/profies/aaee_mapamundi_sb:latest
-    container_name: aaee_mapamundi_app_xxx
+    image: ghcr.io/sophieneuenmuller/aaee_ra4_proy2_sfr:latest
+    container_name: aaee_mapamundi_app_sfr
     ports:
       - "8080:8080"
     env_file:
